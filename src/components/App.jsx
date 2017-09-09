@@ -1,6 +1,6 @@
 var App = () => (
   <div>
-    <nav className="navbar">
+    <nav className="navbartest">
       <div className="col-md-6 offset-md-3">
         <div><h5><em>search</em> view goes here</h5></div>
       </div>
