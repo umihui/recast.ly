@@ -7,16 +7,17 @@ var searchYouTube = (options, callback) => {
       q: options.query,
       part: 'snippet',
       key: options.key,
-      max: options.max
+      maxResults: options.max
     },
     success: function (data) {
+      console.log(data.items);
       callback(data.items);
     },
     error: function () {
       console.error('Failed');
     }
   });
-
+  
 };
 
 window.searchYouTube = searchYouTube;

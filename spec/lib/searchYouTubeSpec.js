@@ -64,21 +64,36 @@ describe('searchYouTube', function() {
     expect(params.maxResults).to.equal('10');
   });
 
-  // Same shape means that the data should have the same keys, nested the same way as `exampleVideoData`,
-  // though it will not necessarily have the same values.
   it('should GET videos with the same shape as `exampleVideoData`', function(done) {
     var options = {
       key: window.YOUTUBE_API_KEY,
       query: 'react',
       max: 5
     };
-
+    //debugger;
     // We want this test to make a real AJAX request
     xhr.restore();
-
+    
     searchYouTube(options, (data) => {
       expect(hasSameShape(data, window.exampleVideoData)).to.be.true;
       done();
     });
   });
+  // Same shape means that the data should have the same keys, nested the same way as `exampleVideoData`,
+  // though it will not necessarily have the same values.
+  // it('should GET videos with the same shape as `exampleVideoData`', function(done) {
+  //   var options = {
+  //     key: window.YOUTUBE_API_KEY,
+  //     query: 'react',
+  //     max: 5
+  //   };
+  //   //debugger;
+  //   // We want this test to make a real AJAX request
+  //   xhr.restore();
+  //
+  //   searchYouTube(options, (data) => {
+  //     expect(hasSameShape(data, window.exampleVideoData)).to.be.true;
+  //     done();
+  //   });
+  // });
 });
