@@ -1,17 +1,7 @@
 var VideoList = (props) => {
-  //console.log(props.videos.items);
-  if (props.videos.items) {
-    return (
-      <div className="video-list">
-        {props.videos.items.map(video =>
-          <VideoListEntry video={video} newclickEvent={props.clickEvent}/>
-        )}
-      </div>
-    );
-  }
 
   return (
-    
+
     <div className="video-list">
 
       {props.videos.map(video =>

@@ -1,18 +1,5 @@
 var VideoListEntry = (props) => (
 
-  // constructor(props) {
-  //   super(props);
-  //
-  //   //this.listenOnClick = this.listenOnClick.bind(this);
-  // }
-
-  // listenOnClick(e){
-  //   console.log(e);
-  //   this.props.newclickEvent(e.video);
-  // }
-
-
-  //  return (
       <div className="video-list-entry media">
         <div className="media-left media-middle">
           <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
@@ -26,7 +13,7 @@ var VideoListEntry = (props) => (
 
     );
 
-//<div className="video-list-entry-title" onClick={this.listenOnClick.bind(this,this.props)}>{this.props.video.snippet.title}</div>
+
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
 VideoListEntry.propTypes = {
