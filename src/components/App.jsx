@@ -2,13 +2,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      select: window.exampleVideoData[0],
-      list: window.exampleVideoData
-    };
-
+    this.state = {};
+    //this.state.list = searchYouTube({ key: YOUTUBE_API_KEY, query:'', max: 5 }, (data) => data);
     this.selectVideo = this.selectVideo.bind(this);
     this.renderList = this.renderList.bind(this);
+  }
+
+  componentWillMount() {
+    var init = searchYouTube({ key: YOUTUBE_API_KEY, query: '', max: 5 }, (data) => data);
+    this.setState({ select: window.exampleVideoData[0],
+      list: init
+    });
+
   }
 
   selectVideo(e) {
