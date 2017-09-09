@@ -1,5 +1,22 @@
 var searchYouTube = (options, callback) => {
-  // TODO
+
+  $.ajax({
+    url: 'https://www.googleapis.com/youtube/v3/search',
+    type: 'GET',
+    data: {
+      q: options.query,
+      part: 'snippet',
+      key: options.key,
+      max: options.max
+    },
+    success: function (data) {
+      callback(data);
+    },
+    error: function () {
+      console.error('Failed');
+    }
+  });
+
 };
 
 window.searchYouTube = searchYouTube;
