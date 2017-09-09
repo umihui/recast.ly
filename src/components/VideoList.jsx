@@ -1,5 +1,4 @@
 var VideoList = (props) => {
-
   return (
 
     <div className="video-list">

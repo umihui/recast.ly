@@ -10,7 +10,7 @@ var searchYouTube = (options, callback) => {
       max: options.max
     },
     success: function (data) {
-      callback(data);
+      callback(data.items);
     },
     error: function () {
       console.error('Failed');
